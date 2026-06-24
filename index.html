@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan: Hike & Ride — Group Trip 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --ink: #1a1814;
+    --muted: #6b6560;
+    --faint: #f0ede8;
+    --paper: #faf8f5;
+    --white: #ffffff;
+    --teal: #1d6b5e;
+    --teal-light: #e3f0ee;
+    --teal-mid: #4d9e8f;
+    --amber: #a0601a;
+    --amber-light: #fdf0e0;
+    --amber-mid: #d4915a;
+    --stone: #8a837c;
+    --border: #e0dbd4;
+    --red: #c0392b;
+    --serif: 'Noto Serif JP', 'Georgia', serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: var(--white);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '山';
+    position: absolute;
+    font-family: var(--serif);
+    font-size: 20rem;
+    color: rgba(255,255,255,0.03);
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--teal-mid);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 38ch;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .pill {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,248,245,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-inner {
+    display: flex;
+    gap: 0;
+    min-width: max-content;
+  }
+
+  .nav-inner a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .nav-inner a:hover {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-child { border-bottom: none; }
+
+  .section-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* ── OPTION CARDS ── */
+  .option-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .option-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .option-card-head {
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .option-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .option-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+  }
+
+  .badge-warn { background: var(--amber-light); color: var(--amber); }
+  .badge-ok { background: var(--teal-light); color: var(--teal); }
+
+  .option-stats {
+    display: flex;
+    gap: 0;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.25rem 0.75rem 0.25rem 0;
+  }
+
+  .stat + .stat {
+    border-left: 1px solid var(--border);
+    padding-left: 0.75rem;
+  }
+
+  .stat-val {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .stat-key {
+    font-size: 0.68rem;
+    color: var(--stone);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    padding: 0.75rem 0;
+  }
+
+  .tl-day {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+
+  .tl-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.6rem;
+  }
+
+  .tl-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 600;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .tl-line {
+    width: 1.5px;
+    flex: 1;
+    min-height: 8px;
+    margin: 3px 0;
+  }
+
+  .tl-right {
+    padding: 0.5rem 1.25rem 0.75rem 0.5rem;
+  }
+
+  .tl-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+
+  .tl-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+  }
+
+  .tl-desc {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* type colours */
+  .t-hike .tl-dot { background: #0F6E56; color: #fff; }
+  .t-hike .tl-line { background: #9FE1CB; }
+  .t-hike .tl-tag { color: #0F6E56; }
+
+  .t-shrine .tl-dot { background: #534AB7; color: #fff; }
+  .t-shrine .tl-line { background: #AFA9EC; }
+  .t-shrine .tl-tag { color: #534AB7; }
+
+  .t-transit .tl-dot { background: #888780; color: #fff; }
+  .t-transit .tl-line { background: #D3D1C7; }
+  .t-transit .tl-tag { color: #5F5E5A; }
+
+  .t-cycle-blue .tl-dot { background: #185FA5; color: #fff; }
+  .t-cycle-blue .tl-line { background: #B5D4F4; }
+  .t-cycle-blue .tl-tag { color: #185FA5; }
+
+  .t-cycle-amber .tl-dot { background: #BA7517; color: #fff; }
+  .t-cycle-amber .tl-line { background: #FAC775; }
+  .t-cycle-amber .tl-tag { color: #854F0B; }
+
+  .note-box {
+    margin: 0.5rem 1.25rem 1rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.76rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .note-teal { background: var(--teal-light); border-left: 3px solid var(--teal); }
+  .note-amber { background: var(--amber-light); border-left: 3px solid var(--amber-mid); }
+  .note-red { background: #fdf0f0; border-left: 3px solid #e07070; color: #8b3333; }
+
+  /* ── SEASON GRID ── */
+  .season-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .season-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1rem 0.85rem;
+  }
+
+  .season-card.best { border-color: var(--teal); }
+  .season-card.best .season-name { color: var(--teal); }
+
+  .season-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    line-height: 1;
+  }
+
+  .season-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .season-months {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--stone);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.04em;
+  }
+
+  .season-desc {
+    font-size: 0.73rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .season-pros, .season-cons {
+    margin-top: 0.5rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.71rem;
+    line-height: 1.6;
+  }
+
+  .season-pros li::before { content: '✓ '; color: var(--teal); font-weight: 600; }
+  .season-cons li::before { content: '✗ '; color: var(--red); font-weight: 600; }
+
+  /* ── WINDOW TABLE ── */
+  .window-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    margin-bottom: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .window-table thead th {
+    background: var(--faint);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stone);
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .window-table tbody td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--faint);
+    color: var(--ink);
+    vertical-align: top;
+  }
+
+  .window-table tbody tr:last-child td { border-bottom: none; }
+
+  .month-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 100px;
+    margin-right: 0.3rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .mb-green { background: #e3f0ee; color: #0F6E56; }
+  .mb-amber { background: var(--amber-light); color: var(--amber); }
+  .mb-red { background: #fdf0f0; color: var(--red); }
+  .mb-gray { background: var(--faint); color: var(--stone); }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tip-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .tip-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+    padding-top: 0.1rem;
+  }
+
+  .tip-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .tip-body {
+    font-size: 0.76rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ── FLIGHTS ── */
+  .flight-row {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .flight-from {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.1rem;
+  }
+
+  .flight-detail {
+    font-size: 0.82rem;
+    color: var(--ink);
+  }
+
+  .flight-badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 0.3rem 0.65rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  /* ── LEGEND ── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── LINKS ── */
+  a.ext-link {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal-light);
+  }
+
+  a.ext-link:hover {
+    border-bottom-color: var(--teal);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.8;
+  }
+
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ── DIVIDER ── */
+  .kv-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    color: var(--border);
+  }
+
+  .kv-divider::before, .kv-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .kv-divider span {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--border);
+    flex-shrink: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .season-grid { grid-template-columns: 1fr; }
+    .stat { min-width: 70px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Group trip planning · Japan 2026/27</p>
+  <h1 class="hero-title">Hike & <em>Ride</em><br>Japan</h1>
+  <p class="hero-sub">Ancient pilgrimage trails in the mountains. Lakeside cycling through castle towns. Seven days, two countries of origin, one trip.</p>
+  <div class="hero-pills">
+    <span class="pill">Kumano Kodo</span>
+    <span class="pill">Biwaichi or Shimanami</span>
+    <span class="pill">Fly into Osaka</span>
+    <span class="pill">7 days</span>
+    <span class="pill">London + SF Bay Area</span>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" aria-label="Page sections">
+  <div class="nav-inner">
+    <a href="#options">The options</a>
+    <a href="#itineraries">Itineraries</a>
+    <a href="#season">When to go</a>
+    <a href="#flights">Flights</a>
+    <a href="#tips">Tips & booking</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ── OPTIONS ── -->
+<section id="options">
+  <div class="container">
+    <p class="section-eyebrow">The concept</p>
+    <h2 class="section-title">Three days hiking, two days cycling</h2>
+    <p class="section-intro">The Kumano Kodo is the anchor — three days on an ancient UNESCO pilgrimage trail through cedar forest and mountain villages, ending at Japan's most sacred shrine. The cycling leg is the choice to make.</p>
+
+    <div class="option-grid">
+
+      <!-- OPTION A -->
+      <div class="option-card">
+        <div class="option-card-head">
+          <span class="option-label">Option A</span>
+          <span class="option-name">Kumano Kodo — hiking only</span>
+          <span class="badge badge-ok">Full trail</span>
+        </div>
+        <div class="option-stats">
+          <div class="stat"><div class="stat-val">5 days</div><div class="stat-key">On trail</div></div>
+          <div class="stat"><div class="stat-val">~57 km</div><div class="stat-key">Total hiking</div></div>
+          <div class="stat"><div class="stat-val">3 shrines</div><div class="stat-key">Kumano Sanzan</div></div>
+          <div class="stat"><div class="stat-val">River boat</div><div class="stat-key">Day 4</div></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-day t-hike">
+            <div class="tl-left"><div class="tl-dot">1</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">Arrive + hike</div><div class="tl-title">Fly in → Tanabe → Takijiri → Takahara</div><div class="tl-desc">Steep forest climb to Takahara village (8.5 km). Night with panoramic valley views.</div></div>
+          </div>
+          <div class="tl-day t-hike">
+            <div class="tl-left"><div class="tl-dot">2</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">Hike</div><div class="tl-title">Takahara → Chikatsuyu (14.5 km)</div><div class="tl-desc">Full day on stone paths through mountain villages. Luggage forwarded ahead.</div></div>
+          </div>
+          <div class="tl-day t-hike">
+            <div class="tl-left"><div class="tl-dot">3</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">Hike + onsen</div><div class="tl-title">→ Hosshinmon-oji → Hongu Taisha → Yunomine</div><div class="tl-desc">Walk to Hosshinmon, bus to Kumano Hongu Taisha. Night in Yunomine Onsen village.</div></div>
+          </div>
+          <div class="tl-day t-shrine">
+            <div class="tl-left"><div class="tl-dot">4</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">Boat + shrine</div><div class="tl-title">Kumanogawa River Boat → Shingu → Hayatama Taisha</div><div class="tl-desc">Legendary pilgrim boat downstream to Shingu coast. Visit 2nd grand shrine. Book early — sells out months ahead.</div></div>
+          </div>
+          <div class="tl-day t-shrine">
+            <div class="tl-left"><div class="tl-dot">5</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">Shrine + waterfall</div><div class="tl-title">Daimon-zaka → Nachi Taisha + Nachi Falls</div><div class="tl-desc">Cedar-lined approach, 3rd grand shrine, Japan's tallest waterfall (133 m) side by side.</div></div>
+          </div>
+          <div class="tl-day t-transit">
+            <div class="tl-left"><div class="tl-dot">6</div><div class="tl-line"></div></div>
+            <div class="tl-right"><div class="tl-tag">City evening</div><div class="tl-title">Kii-Katsuura → Osaka (~3.5 hrs)</div><div class="tl-desc">Coast train back to Osaka. Evening in Dotonbori. Final night hotel.</div></div>
+          </div>
+          <div class="tl-day t-transit">
+            <div class="tl-left"><div class="tl-dot">7</div></div>
+            <div class="tl-right"><div class="tl-tag">Depart</div><div class="tl-title">Osaka → fly home</div><div class="tl-desc">KIX is 77 min from central Osaka.</div></div>
+          </div>
+        </div>
+        <div class="note-box note-teal">Rated 4.8/5 from 315+ reviews via Kumano Travel. The full itinerary with river boat and all three grand shrines. Best if the group wants depth over variety.</div>
+      </div>
+
+    </div>
+
+    <div class="kv-divider"><span>—</span></div>
+
+    <p class="section-intro" style="margin-bottom: 1rem;">If you want both hiking <em>and</em> cycling in 7 days, you cut the Kodo to 3 days and choose your cycling route. Two options:</p>
+
+    <div class="option-grid">
+
+      <!-- OPTION B1 -->
+      <div class="option-card">
+        <div class="option-card-head">
+          <span class="option-label">Option B1</span>
+          <span class="option-name">Kodo + Shimanami Kaido</span>
+          <span class="badge badge-warn">Transfer day</span>
+        </div>
+        <div class="option-stats">
+          <div class="stat"><div class="stat-val">~30 km</div><div class="stat-key">Hiking</div></div>
+          <div class="stat"><div class="stat-val">~70 km</div><div class="stat-key">Cycling</div></div>
+          <div class="stat"><div class="stat-val">6 islands</div><div class="stat-key">Honshu → Shikoku</div></div>
+          <div class="stat"><div class="stat-val">5–6 hrs</div><div class="stat-key">Day 4 travel</div></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-day t-hike"><div class="tl-left"><div class="tl-dot">1</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Arrive + hike</div><div class="tl-title">Tanabe → Takijiri → Takahara</div><div class="tl-desc">Same opening day. Cedar forest climb, night at Takahara.</div></div></div>
+          <div class="tl-day t-hike"><div class="tl-left"><div class="tl-dot">2</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Hike</div><div class="tl-title">Takahara → Chikatsuyu (14.5 km)</div><div class="tl-desc">Full trail day. Luggage forwarded.</div></div></div>
+          <div class="tl-day t-shrine"><div class="tl-left"><div class="tl-dot">3</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Hike + shrine</div><div class="tl-title">→ Hongu Taisha + Yunomine Onsen</div><div class="tl-desc">Walk to Hosshinmon, bus to the most sacred of the three shrines. Evening at Yunomine hot spring village.</div></div></div>
+          <div class="tl-day t-transit"><div class="tl-left"><div class="tl-dot">4</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Full travel day</div><div class="tl-title">Hongu → Shingu → Osaka → Onomichi</div><div class="tl-desc">Bus coast, JR Kisei Line to Osaka (~3 hrs), Shinkansen to Fukuyama + local to Onomichi (~2.5 hrs). ~5–6 hrs total. Night in Onomichi.</div></div></div>
+          <div class="tl-day t-cycle-blue"><div class="tl-left"><div class="tl-dot">5</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Cycling — day 1</div><div class="tl-title">Onomichi → Omishima Island (~35 km)</div><div class="tl-desc">Ferry to Mukaishima, cycle across Innoshima and Ikuchijima. Kosanji Temple, citrus groves. Night on Omishima.</div></div></div>
+          <div class="tl-day t-cycle-blue"><div class="tl-left"><div class="tl-dot">6</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Cycling — day 2</div><div class="tl-title">Omishima → Imabari / Shikoku (~35 km)</div><div class="tl-desc">Cross Hakatajima and Oshima. Finish over the Kurushima triple suspension bridge into Imabari. Bus back to Onomichi (2 hrs).</div></div></div>
+          <div class="tl-day t-transit"><div class="tl-left"><div class="tl-dot">7</div></div><div class="tl-right"><div class="tl-tag">Depart</div><div class="tl-title">Onomichi → Osaka → fly home</div><div class="tl-desc">Shinkansen to KIX (~3.5 hrs).</div></div></div>
+        </div>
+        <div class="note-box note-teal">Shimanami is Japan's most iconic cycling route — the bridges and Inland Sea are genuinely spectacular. The transfer day (Day 4) is the real cost: long, tiring, after hiking. Worth it if the group is up for it.</div>
+      </div>
+
+      <!-- OPTION B2 -->
+      <div class="option-card" style="border-color: var(--teal);">
+        <div class="option-card-head" style="border-bottom-color: var(--teal);">
+          <span class="option-label">Option B2 <span style="color:var(--teal)">★ Recommended</span></span>
+          <span class="option-name">Kodo + Biwaichi (Lake Biwa)</span>
+          <span class="badge badge-ok">No transfer day</span>
+        </div>
+        <div class="option-stats">
+          <div class="stat"><div class="stat-val">~30 km</div><div class="stat-key">Hiking</div></div>
+          <div class="stat"><div class="stat-val">~100 km</div><div class="stat-key">Cycling</div></div>
+          <div class="stat"><div class="stat-val">25 min</div><div class="stat-key">From Kyoto</div></div>
+          <div class="stat"><div class="stat-val">~3 hrs</div><div class="stat-key">Day 4 travel</div></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-day t-hike"><div class="tl-left"><div class="tl-dot">1</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Arrive + hike</div><div class="tl-title">Tanabe → Takijiri → Takahara</div><div class="tl-desc">Same opening day. Night at Takahara with valley views.</div></div></div>
+          <div class="tl-day t-hike"><div class="tl-left"><div class="tl-dot">2</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Hike</div><div class="tl-title">Takahara → Chikatsuyu (14.5 km)</div><div class="tl-desc">Full trail day. Luggage forwarded.</div></div></div>
+          <div class="tl-day t-shrine"><div class="tl-left"><div class="tl-dot">3</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Hike + shrine</div><div class="tl-title">→ Hongu Taisha + Yunomine Onsen</div><div class="tl-desc">Walk to Hosshinmon, bus to Hongu Taisha. Soak in Yunomine — a UNESCO World Heritage hot spring in continuous use for 1,800 years.</div></div></div>
+          <div class="tl-day t-transit"><div class="tl-left"><div class="tl-dot">4</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Easy travel day</div><div class="tl-title">Hongu → Osaka → Otsu / Lake Biwa</div><div class="tl-desc">Bus to Kii-Tanabe, express to Osaka (~2 hrs), local train to Otsu (10 min from Kyoto). Bikes from station. Afternoon warm-up ride by the lake. ~3 hrs total. Night in Hikone or Omihachiman.</div></div></div>
+          <div class="tl-day t-cycle-amber"><div class="tl-left"><div class="tl-dot">5</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Cycling — day 1</div><div class="tl-title">East shore: Otsu → Hikone → Omihachiman (~50 km)</div><div class="tl-desc">Flat lakeside paths. Hikone Castle (one of Japan's four original castles), willow-lined canals of Omihachiman. Night mid-lake.</div></div></div>
+          <div class="tl-day t-cycle-amber"><div class="tl-left"><div class="tl-dot">6</div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-tag">Cycling — day 2</div><div class="tl-title">West shore: Metasequoia Ave → Shirahige Shrine → Otsu (~50 km)</div><div class="tl-desc">The famous metasequoia tree avenue in Takashima, Shirahige Shrine's torii gate standing in the lake. Return south to drop bikes. Evening in Kyoto or Osaka.</div></div></div>
+          <div class="tl-day t-transit"><div class="tl-left"><div class="tl-dot">7</div></div><div class="tl-right"><div class="tl-tag">Depart</div><div class="tl-title">Kyoto/Osaka → fly home</div><div class="tl-desc">KIX is 77 min from Otsu. Easy morning departure with optional Kyoto half-day.</div></div></div>
+        </div>
+        <div class="note-box note-amber">Biwaichi is entirely flat on the east shore — the most accessible cycling in Japan. Saves a full day of transit, and leaves you finishing in Kyoto rather than stuck connecting trains. The lake scenery with castle towns is genuinely beautiful.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ITINERARY FULL ── -->
+<section id="itineraries">
+  <div class="container">
+    <p class="section-eyebrow">The route in brief</p>
+    <h2 class="section-title">What each option gives you</h2>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1.5rem;">
+      <table class="window-table" style="border:none;border-radius:0;margin:0;">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Option A (Hike only)</th>
+            <th>Option B1 (+ Shimanami)</th>
+            <th>Option B2 (+ Biwaichi)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">Hiking days</td>
+            <td>5 full days</td>
+            <td>3 days</td>
+            <td>3 days</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">Shrines visited</td>
+            <td>All 3 Kumano Sanzan</td>
+            <td>Hongu Taisha only</td>
+            <td>Hongu Taisha only</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">River boat</td>
+            <td>Yes (book early)</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">Cycling terrain</td>
+            <td>—</td>
+            <td>Coastal, islands, bridges</td>
+            <td>Flat lake loop</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">Lost day to transit</td>
+            <td>No</td>
+            <td>Yes — Day 4 (~5–6 hrs)</td>
+            <td>No — Day 4 is ~3 hrs</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">End city</td>
+            <td>Osaka</td>
+            <td>Onomichi (near Hiroshima)</td>
+            <td>Kyoto / Osaka</td>
+          </tr>
+          <tr>
+            <td style="font-weight:500;color:var(--stone);font-size:0.72rem;">Best for</td>
+            <td>Walkers wanting full depth</td>
+            <td>Iconic cycling in Japan</td>
+            <td>Relaxed group, mixed fitness</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box note-teal" style="margin:0 0 1rem;">
+      <strong>Kumano Kodo bookings:</strong> Use <a class="ext-link" href="https://www.kumano-travel.com/en/dynamic-packages/5-days-E1-kumano-kodo-trek-nakahechi" target="_blank" rel="noopener">kumano-travel.com</a> — the official Tanabe City Tourism Bureau system. Luggage forwarding is available throughout (bags travel between guesthouses while you hike). Note the booking system runs on Japanese business hours: roughly 2–10am UK time, 6pm–2am PST. Book 3–6 months ahead for spring/autumn.
+    </div>
+
+    <div class="note-box note-red" style="margin:0 0 1rem;">
+      <strong>River boat (Option A):</strong> The Kumanogawa pilgrim boat sells out months in advance. If doing Option A, book the boat the moment you book everything else. If it's unavailable, there's a bus alternative but it's not the same experience.
+    </div>
+
+    <div class="note-box note-amber" style="margin:0;">
+      <strong>Biwaichi bike rental:</strong> Hire from stations near Otsu, Hikone or Maibara. E-bikes are available and recommended for the group — ~¥4,000–8,000/day. Reserve online in advance, especially for weekends and peak season. Drop-off at a different station is usually possible but must be arranged ahead.
+    </div>
+  </div>
+</section>
+
+<!-- ── SEASON ── -->
+<section id="season">
+  <div class="container">
+    <p class="section-eyebrow">Timing</p>
+    <h2 class="section-title">When to go</h2>
+    <p class="section-intro">Spring and autumn are the clear windows. The Kii Peninsula is one of the wettest areas in mainland Japan year-round, but those two seasons offer the most reliable hiking conditions and the best scenery. Summer is genuinely miserable for hiking — hot, humid, and typhoon season overlaps.</p>
+
+    <div class="season-grid">
+      <div class="season-card best">
+        <div class="season-icon">🌸</div>
+        <div class="season-name">Spring</div>
+        <div class="season-months">Late March – May</div>
+        <div class="season-desc">Cherry blossoms in late March/April. Mild temperatures (10–18°C), generally dry. The most popular window.</div>
+        <ul class="season-pros">
+          <li>Cherry blossoms on trail</li>
+          <li>Cool, comfortable hiking</li>
+          <li>Long daylight hours by May</li>
+        </ul>
+        <ul class="season-cons">
+          <li>Golden Week (late Apr–early May): crowded, accommodation books out</li>
+          <li>Book Kumano guesthouses 6–9 months ahead</li>
+        </ul>
+      </div>
+
+      <div class="season-card best">
+        <div class="season-icon">🍁</div>
+        <div class="season-name">Autumn</div>
+        <div class="season-months">October – November</div>
+        <div class="season-desc">Peak foliage colours in October/November. Crisp air, low humidity, spectacular forest colours along the Kodo.</div>
+        <ul class="season-pros">
+          <li>Stunning autumn foliage</li>
+          <li>Coolest, clearest cycling</li>
+          <li>Less crowded than spring</li>
+        </ul>
+        <ul class="season-cons">
+          <li>Early September: typhoon risk</li>
+          <li>Late November: days shorten</li>
+          <li>Peak foliage weeks book fast</li>
+        </ul>
+      </div>
+
+      <div class="season-card">
+        <div class="season-icon">☀️</div>
+        <div class="season-name">Summer</div>
+        <div class="season-months">June – August</div>
+        <div class="season-desc">Rainy season in June. July–August: 25–35°C with high humidity on the trail. Typhoon risk from August.</div>
+        <ul class="season-cons">
+          <li>Oppressive heat and humidity</li>
+          <li>Typhoon disruption risk</li>
+          <li>Kumano is very wet in June</li>
+        </ul>
+      </div>
+
+      <div class="season-card">
+        <div class="season-icon">❄️</div>
+        <div class="season-name">Winter</div>
+        <div class="season-months">December – February</div>
+        <div class="season-desc">Quiet trails, 3–10°C. Small chance of snow. Onsen are especially good. Shorter daylight hours.</div>
+        <ul class="season-pros">
+          <li>Very few other hikers</li>
+          <li>Onsen at their best</li>
+        </ul>
+        <ul class="season-cons">
+          <li>Short days, early dark</li>
+          <li>Some guesthouses close</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section-eyebrow" style="margin-top:2rem;">Month-by-month at a glance</p>
+    <table class="window-table" style="margin-top:0.75rem;">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Hiking</th>
+          <th>Cycling</th>
+          <th>Crowds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mar</strong></td>
+          <td><span class="month-badge mb-green">Good</span></td>
+          <td><span class="month-badge mb-green">Good</span></td>
+          <td><span class="month-badge mb-amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>Apr</strong></td>
+          <td><span class="month-badge mb-green">Best</span> 🌸</td>
+          <td><span class="month-badge mb-green">Best</span></td>
+          <td><span class="month-badge mb-red">High</span> Golden Week end</td>
+        </tr>
+        <tr>
+          <td><strong>May</strong></td>
+          <td><span class="month-badge mb-green">Good</span></td>
+          <td><span class="month-badge mb-green">Best</span></td>
+          <td><span class="month-badge mb-amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>Jun</strong></td>
+          <td><span class="month-badge mb-amber">OK</span></td>
+          <td><span class="month-badge mb-amber">OK</span></td>
+          <td><span class="month-badge mb-green">Low</span></td>
+        </tr>
+        <tr>
+          <td><strong>Jul–Aug</strong></td>
+          <td><span class="month-badge mb-red">Avoid</span></td>
+          <td><span class="month-badge mb-red">Hot</span></td>
+          <td><span class="month-badge mb-red">Peak</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sep</strong></td>
+          <td><span class="month-badge mb-amber">OK</span> typhoon risk</td>
+          <td><span class="month-badge mb-amber">OK</span></td>
+          <td><span class="month-badge mb-amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>Oct</strong></td>
+          <td><span class="month-badge mb-green">Best</span></td>
+          <td><span class="month-badge mb-green">Best</span></td>
+          <td><span class="month-badge mb-amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>Nov</strong></td>
+          <td><span class="month-badge mb-green">Best</span> 🍁</td>
+          <td><span class="month-badge mb-green">Good</span></td>
+          <td><span class="month-badge mb-amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dec–Feb</strong></td>
+          <td><span class="month-badge mb-gray">Quiet</span></td>
+          <td><span class="month-badge mb-gray">Cool</span></td>
+          <td><span class="month-badge mb-green">Very low</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box note-teal" style="margin:1rem 0 0;">
+      <strong>Sweet spot:</strong> October is the single best month — stable weather, autumn foliage beginning, not yet the November rush. Mid-October is ideal for both hiking and Biwaichi cycling. Late April (avoiding Golden Week itself, which ends 5 May) is the spring equivalent.
+    </div>
+  </div>
+</section>
+
+<!-- ── FLIGHTS ── -->
+<section id="flights">
+  <div class="container">
+    <p class="section-eyebrow">Getting there</p>
+    <h2 class="section-title">Flights into Osaka (KIX)</h2>
+    <p class="section-intro">Both departure cities connect well to Kansai International. The SF Bay Area actually has better direct options than London — the key is coordinating arrival times so the group can travel to Tanabe together on Day 1.</p>
+
+    <div class="flight-row">
+      <div>
+        <div class="flight-from">London (LHR)</div>
+        <div class="flight-detail">No direct service. Best connections: <strong>Finnair via Helsinki</strong>, <strong>KLM via Amsterdam</strong>, <strong>Qatar via Doha</strong>, <strong>Lufthansa via Frankfurt</strong>. All ~14–16 hrs total.</div>
+      </div>
+      <span class="flight-badge">~14–16 hrs</span>
+    </div>
+
+    <div class="flight-row">
+      <div>
+        <div class="flight-from">San Francisco (SFO)</div>
+        <div class="flight-detail">Daily nonstop with <strong>United</strong> and <strong>ANA</strong>. ~11h 40m direct to KIX. JAL also serves this route. Best-value month is typically September.</div>
+      </div>
+      <span class="flight-badge">~11h 40m direct</span>
+    </div>
+
+    <div class="note-box note-teal" style="margin-bottom:1rem;">
+      <strong>Coordination tip:</strong> Align arrivals at KIX on the same evening where possible. From KIX to Kii-Tanabe takes about 2 hours via the JR Haruka to Osaka, then the limited express Kuroshio. If the group can arrive by early afternoon, you can reach Tanabe before dark and be ready for Day 1 proper the next morning.
+    </div>
+
+    <div class="note-box note-amber">
+      <strong>Japan Rail Pass:</strong> Worth buying for this trip if you're doing the Kumano Kodo + cycling combo — the Shinkansen connections and limited express trains add up. Purchase before leaving home (required); validate on arrival. The 7-day pass (~¥50,000) covers most of your rail needs. Note: the Kumano Travel booking window runs on Japanese hours — roughly 2–10am UK / 6pm–2am PST.
+    </div>
+  </div>
+</section>
+
+<!-- ── TIPS ── -->
+<section id="tips">
+  <div class="container">
+    <p class="section-eyebrow">Logistics</p>
+    <h2 class="section-title">Tips & things to sort early</h2>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🏔️</div>
+        <div>
+          <div class="tip-title">Book the Kumano Kodo early</div>
+          <div class="tip-body">The guesthouses along the Nakahechi route are small and limited. Book 6–9 months ahead for spring or autumn. The <a class="ext-link" href="https://www.kumano-travel.com" target="_blank" rel="noopener">Kumano Travel system</a> handles accommodation + luggage forwarding. The booking window is Japanese business hours: roughly 09:00–18:00 JST (01:00–10:00 UK / 17:00–02:00 PST the day before).</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🚤</div>
+        <div>
+          <div class="tip-title">The river boat sells out fast</div>
+          <div class="tip-body">If doing Option A, the Kumanogawa pilgrim boat from Hongu to Shingu is one of the highlights — but it books out months ahead. Reserve it at the same time as everything else, or have a bus backup plan ready.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🚲</div>
+        <div>
+          <div class="tip-title">Reserve e-bikes for Biwaichi</div>
+          <div class="tip-body">E-bikes (electric-assist) are the right call for a mixed-fitness group on the lake loop — they make the 50 km days comfortable and remove pressure from slower riders. Reserve well ahead, especially for weekends. Rental stations near Otsu, Hikone, and Maibara Station. Bike tolls are currently waived on Biwaichi. For Shimanami, e-bike hire starts at ¥8,000/day from Onomichi.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🎒</div>
+        <div>
+          <div class="tip-title">Luggage forwarding (takuhaibin)</div>
+          <div class="tip-body">On the Kumano Kodo, your main bags are forwarded between guesthouses daily so you only carry a daypack. On the cycling days, use Sagawa Express or Yamato Transport to send bags between hotels. Most Japanese convenience stores (7-Eleven, FamilyMart) accept parcels for next-day delivery.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">💴</div>
+        <div>
+          <div class="tip-title">Cash still matters</div>
+          <div class="tip-body">Many guesthouses and rural stops on both routes are cash-only. Keep at least ¥20,000–30,000 per person in cash at all times. 7-Eleven ATMs reliably accept international cards. Card acceptance is improving but don't count on it for small inns or trail-side cafes.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🌧️</div>
+        <div>
+          <div class="tip-title">Expect some rain</div>
+          <div class="tip-body">The Kii Peninsula is one of the wettest regions in Japan year-round. Pack proper waterproof gear, not just a packable shell. Good waterproof hiking boots matter on the stone paths. On the Kodo, rain makes the forest atmosphere genuinely otherworldly — embrace it.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🥢</div>
+        <div>
+          <div class="tip-title">Meals at guesthouses</div>
+          <div class="tip-body">Most Kumano guesthouses offer dinner and breakfast as part of the rate (half-board). The meals are home-cooked regional Japanese food — one of the best parts of the trail. Declare dietary restrictions when booking. Vegetarian is usually accommodated; other restrictions may be harder. Confirm in writing.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">📱</div>
+        <div>
+          <div class="tip-title">Data and navigation</div>
+          <div class="tip-body">Get a Japan data SIM or eSIM on arrival (or pre-purchase online). Google Maps works well for both routes. For Biwaichi, download the free "BIWAICHI Cycling Navi" app — it has GPS routing and English support. On the Kodo, the trail is well-marked with wooden signs, but Google Maps is useful as backup.</div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">♨️</div>
+        <div>
+          <div class="tip-title">Onsen etiquette</div>
+          <div class="tip-body">Most guesthouses on the Kodo have communal onsen (hot spring baths). These are taken without swimwear. Tattoos may be prohibited at some establishments — if this applies to anyone in the group, ask when booking. Yunomine Onsen in particular is one of the oldest hot springs in Japan and is genuinely special after a day of hiking.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>Japan: Hike &amp; Ride</strong><br>
+  Planning document for a group trip from London &amp; the SF Bay Area<br>
+  Kumano Kodo bookings: <a href="https://www.kumano-travel.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">kumano-travel.com</a> · Biwaichi info: <a href="https://en.biwako1.jp" style="color:rgba(255,255,255,0.5);text-decoration:none;">en.biwako1.jp</a><br>
+  <span style="font-size:0.68rem;opacity:0.6;margin-top:0.5rem;display:block;">Built with Claude · For personal trip planning use only</span>
+</footer>
+
+</body>
+</html>
