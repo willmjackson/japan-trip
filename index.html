@@ -40,7 +40,11 @@
 
   /* ── HERO ── */
   .hero {
-    background: var(--ink);
+    background:
+      linear-gradient(rgba(20,18,14,0.72), rgba(20,18,14,0.84)),
+      url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Three-storied_Pagoda_of_Seiganto-ji_and_Nachi_Falls_201808.jpg/1280px-Three-storied_Pagoda_of_Seiganto-ji_and_Nachi_Falls_201808.jpg')
+      center 30% / cover no-repeat;
+    background-color: var(--ink);
     color: var(--white);
     padding: 4rem 1.5rem 3rem;
     text-align: center;
@@ -197,6 +201,14 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  .opt-img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
   }
 
   .option-card-head {
@@ -661,6 +673,7 @@
 
       <!-- OPTION A -->
       <div class="option-card">
+        <img class="opt-img" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kumano_Kodo_forest.jpg/1280px-Kumano_Kodo_forest.jpg" alt="Cedar forest along the Kumano Kodo pilgrimage trail">
         <div class="option-card-head">
           <span class="option-label">Option A</span>
           <span class="option-name">Kumano Kodo — hiking only</span>
@@ -715,6 +728,7 @@
 
       <!-- OPTION B1 -->
       <div class="option-card">
+        <img class="opt-img" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Shimanami_Kaido%2C_Kurushima-Kaiky%C5%8D_Bridge_-_panoramio.jpg/1280px-Shimanami_Kaido%2C_Kurushima-Kaiky%C5%8D_Bridge_-_panoramio.jpg" alt="Kurushima-Kaikyo suspension bridge on the Shimanami Kaido cycling route">
         <div class="option-card-head">
           <span class="option-label">Option B1</span>
           <span class="option-name">Kodo + Shimanami Kaido</span>
@@ -740,6 +754,7 @@
 
       <!-- OPTION B2 -->
       <div class="option-card" style="border-color: var(--teal);">
+        <img class="opt-img" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Shirahige_Shrine_20200919_03.jpg/1280px-Shirahige_Shrine_20200919_03.jpg" alt="Shirahige Shrine torii gate standing in Lake Biwa">
         <div class="option-card-head" style="border-bottom-color: var(--teal);">
           <span class="option-label">Option B2 <span style="color:var(--teal)">★ Recommended</span></span>
           <span class="option-name">Kodo + Biwaichi (Lake Biwa)</span>
@@ -1108,7 +1123,8 @@
   <strong>Japan: Hike &amp; Ride</strong><br>
   Planning document for a group trip from London &amp; the SF Bay Area<br>
   Kumano Kodo bookings: <a href="https://www.kumano-travel.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">kumano-travel.com</a> · Biwaichi info: <a href="https://en.biwako1.jp" style="color:rgba(255,255,255,0.5);text-decoration:none;">en.biwako1.jp</a><br>
-  <span style="font-size:0.68rem;opacity:0.6;margin-top:0.5rem;display:block;">Built with Claude · For personal trip planning use only</span>
+  <span style="font-size:0.68rem;opacity:0.6;margin-top:0.5rem;display:block;">Photos via <a href="https://commons.wikimedia.org" style="color:rgba(255,255,255,0.5);text-decoration:none;">Wikimedia Commons</a> (CC BY / CC BY-SA / CC0)</span>
+  <span style="font-size:0.68rem;opacity:0.6;display:block;">Built with Claude · For personal trip planning use only</span>
 </footer>
 
 </body>
